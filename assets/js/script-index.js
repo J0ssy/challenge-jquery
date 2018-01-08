@@ -2,11 +2,8 @@ $(document).ready( function(){
 //Escondiendo ícono de flecha
   $('.js-back').hide();
 
-
-
-
-
-
+  //Llamando función printNews
+  printNews();
 
 
 
@@ -14,6 +11,15 @@ $(document).ready( function(){
 	renderHighlightedRecipes(recipesArray);
 
 });
+
+//Asignando el texto "Nuevas Recetas"
+function printNews() {
+   $('.callout-news').find('p').text('NUEVAS RECETAS');
+}
+
+
+
+
 
 
 /*
