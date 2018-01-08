@@ -47,6 +47,22 @@ function renderHighlightedRecipes(recipesArray) {
 */
 function renderRecipe(recipe) {
 	console.log('Voy a pintar la receta: ', recipe);
+  var container = $('.list-recipes');
+
+
+  container.append(
+    '<a class="item-recipe" href="#">' +
+    '<span class="attribution">' +
+    '<span class="title-recipe">' + recipe.title + '</span>' +
+    '<span class="metadata-recipe">' + 
+    '<span class="author-recipe">' + recipe.source.name + '</span>' +
+    '<span class="bookmarks-recipe">' +
+    '<span class="icon-bookmark"></span>' + 
+    '</span>' +
+    '</span>' +
+    '</span>' +
+    '<img src="assets/img/recipes/640x480/' + recipe.name + '.jpg" />' +
+    '</a>');
 }
 
 
