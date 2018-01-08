@@ -14,6 +14,12 @@ $(document).ready( function(){
   */
 	renderHighlightedRecipes(recipesArray);
 
+
+  /*
+  * Llamando a la Función renderActivities
+  */
+  renderActivities(activities);
+
 });
 
 /*
@@ -65,13 +71,14 @@ function renderRecipe(recipe) {
     '</a>');
 }
 
-
-
 /*
 * Función que se encarga de pintar todas las actividades
 */
 function renderActivities(activitiesArray) {
 	console.log('Activities: ', activitiesArray);
+  for (var i = 0; i < activities.length; i++) {
+    renderActivity(activities[i]);
+   }
 }
 
 /*
@@ -80,7 +87,13 @@ function renderActivities(activitiesArray) {
 * archivo "templates/templates-activity.html"
 */
 function renderActivity(recipe) {
-	
+	//if (recipe.length > 0) {
+    $('.wrapper-message').hide();
+  //}
+
+  /*
+  * El if es innecesario ya que al activarse esta función indica de por sí que ya tiene más de 1 elemento
+  */
 }
 
 
