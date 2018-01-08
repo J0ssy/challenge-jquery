@@ -1,33 +1,42 @@
 $(document).ready( function(){
-//Escondiendo ícono de flecha
+  /*
+  * Escondiendo ícono de flecha
+  */
   $('.js-back').hide();
 
-  //Llamando función printNews
+  /*
+  * Llamando función printNews
+  */
   printNews();
 
-
-
-	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
+  /*
+  * La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
+  */
 	renderHighlightedRecipes(recipesArray);
 
 });
 
-//Asignando el texto "Nuevas Recetas"
+/*
+* Asignando el texto "Nuevas Recetas"
+*/
 function printNews() {
    $('.callout-news').find('p').text('NUEVAS RECETAS');
 }
-
-
-
-
-
 
 /*
 * Función que se encarga de pintar TODAS las recetas que tengan 
 * marcado el atributo "highlighted" como TRUE
 */
 function renderHighlightedRecipes(recipesArray) {
-	console.log('Recipes: ', recipesArray);
+  console.log('Recipes: ', recipesArray);
+  /*
+  *Recorrer variable recipesArray buscando Highlighted true
+  */
+  for (var i = 0; i < recipesArray.length; i++) {
+    if(recipesArray[i].highlighted) {
+    renderRecipe(recipesArray[i]);
+    }
+  }
 }
 
 /*
